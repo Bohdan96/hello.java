@@ -13,9 +13,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-      steps:
+    steps:
       - name: Print hlwrld
         run: echo "Hello world"
         
       - name: Git clone repo
-        users: actions/checkout@v1
+        uses: actions/checkout@v1
