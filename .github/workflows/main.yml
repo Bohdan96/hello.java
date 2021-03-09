@@ -6,7 +6,16 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+    - master
+    
+jobs:
+  test:
+    runs-on: ubuntu-latest
 
+      steps:
+      - name: Print hlwrld
+        run: echo "Hello world"
+        
+      - name: Git clone repo
+        users: actions/checkout@v1
